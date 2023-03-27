@@ -1,7 +1,5 @@
 package TP0.ex5;
 
-import java.util.Arrays;
-
 public class Student extends Person{
     private int[] grades;
     private double mean;

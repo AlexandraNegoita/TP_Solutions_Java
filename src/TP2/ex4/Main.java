@@ -9,7 +9,7 @@ public class Main {
         String[] data = new String[45];
         int index =0;
         try{
-            File myObj = new File("passwd.txt");
+            File myObj = new File("files\\TP2\\passwd.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 data[index] = myReader.nextLine();

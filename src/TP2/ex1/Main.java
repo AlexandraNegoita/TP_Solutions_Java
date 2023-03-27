@@ -1,19 +1,20 @@
-package TP2.ex2;
+package TP2.ex1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String[] data = new String[12];
-        int index =0;
+        String data = "";
+        int index = 1;
         try{
             File myObj = new File("files\\TP2\\BusinessFinancialData.csv");
             Scanner myReader = new Scanner(myObj);
-            while (myReader.hasNextLine()) {
-                data[index] = myReader.nextLine();
-                data[index]+="\r\n";
+            while (myReader.hasNextLine() && index != 4) {
+                data = myReader.nextLine();
                 index++;
             }
             myReader.close();
@@ -24,20 +25,15 @@ public class Main {
         }
 
         System.out.println("a) ");
-        for(int i=0; i< data.length; i++){
-            System.out.println(data[i]);
-        }
+        System.out.println("\t"+data.indexOf("Business"));
         System.out.println();
-
         System.out.println("b) ");
-        for(int i=0; i< data.length; i++){
-            String[] fields = data[i].split(",");
-            System.out.println("\tCode: " + fields[0]);
-            System.out.println("\tValeur totale: " + fields[2]);
-            System.out.println("\tCode: " + fields[4]);
-            System.out.println();
-        }
-
-
+        System.out.println("\t"+data.lastIndexOf(" "));
+        System.out.println();
+        System.out.println("c) ");
+        String[] fields = data.split(",");
+        System.out.println("\tCode: " + fields[0]);
+        System.out.println("\tValeur totale: " + fields[2]);
+        System.out.println("\tCode: " + fields[4]);
     }
 }

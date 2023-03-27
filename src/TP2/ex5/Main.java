@@ -11,7 +11,7 @@ public class Main {
         String[] data = new String[12];
         int index =0;
         try{
-            File myObj = new File("BusinessFinancialData.csv");
+            File myObj = new File("files\\TP2\\BusinessFinancialData.csv");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 data[index] = myReader.nextLine();

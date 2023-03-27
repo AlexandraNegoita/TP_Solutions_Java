@@ -2,7 +2,6 @@ package TP2.ex3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ public class Main {
         int index =0;
         ArrayList<Entreprise> entreprises = new ArrayList<>();
         try{
-            File myObj = new File("BusinessFinancialData.csv");
+            File myObj = new File("files\\TP2\\BusinessFinancialData.csv");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 data[index] = myReader.nextLine();
@@ -26,13 +25,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("a) ");
-        for(int i=0; i< data.length; i++){
-            System.out.println(data[i]);
-        }
-        System.out.println();
 
-        System.out.println("b) ");
         for(int i=0; i< data.length; i++){
             String[] fields = data[i].split(",");
             entreprises.add(new Entreprise(fields[0], fields[1], fields[2]));

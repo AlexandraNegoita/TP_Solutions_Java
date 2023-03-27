@@ -1,8 +1,6 @@
 package TP1.ex3;
 
-import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Main {
