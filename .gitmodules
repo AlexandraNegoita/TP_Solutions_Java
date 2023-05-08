@@ -13,3 +13,6 @@
 [submodule "src/TP7"]
 	path = src/TP7
 	url = https://github.com/UPB-FILS-ALF/TP7-Solutions
+[submodule "src/TP8"]
+	path = src/TP8
+	url = https://github.com/UPB-FILS-ALF/TP8-Solutions
